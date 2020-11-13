@@ -17,4 +17,6 @@
 
 ## <ins> Verified Skills</ins>  :
 - _**Java(Basic)**_
-<p align="right"> Details Only Apply To HackerRank</p>
+
+
+<p align="right"> On HackerRank Only</p>
