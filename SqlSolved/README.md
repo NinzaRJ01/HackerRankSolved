@@ -16,8 +16,10 @@ SELECT * FROM CITY
 WHERE POPULATION >=100000 AND COUNTRYCODE="USA";
 ```
 **Problem 2:**
-_Query the NAME field for all American cities in the CITY table with populations larger than 120000. The CountryCode for America is USA._
-CITY table described as:_
+_
+Query the NAME field for all American cities in the CITY table with populations larger than 120000. The CountryCode for America is USA._
+
+CITY table described as:
 
 |Field		|Type		  |
 | -------- | ------------|
@@ -30,7 +32,7 @@ CITY table described as:_
 SELECT NAME FROM CITY 
 WHERE POPULATION > 120000 AND COUNTRYCODE="USA";
 ```
-**Problem 3:**Select ALL
+**Problem 3:** Select ALL
 _Query all columns (attributes) for every row in the CITY table._
 
 The CITY table is described as follows: 
@@ -47,6 +49,7 @@ The CITY table is described as follows:
 SELECT * FROM CITY;
 ```
 **Problem 4:** Select by ID
+
 _Query all columns for a city in CITY with the ID 1661._
 
 The CITY table is described as follows: 
@@ -63,6 +66,7 @@ SELECT * FROM CITY
 WHERE ID=1661;
 ```
 **Problem 5 :** japanese cities
+
 _Query all attributes of every Japanese city in the CITY table. The COUNTRYCODE for Japan is JPN._
 
 The CITY table is described as follows: 
@@ -79,7 +83,8 @@ The CITY table is described as follows:
 SELECT * FROM CITY 
 WHERE COUNTRYCODE ="JPN";
 ```
-**PROBLEM 6:**japanese cities' names
+**PROBLEM 6:** Japanese cities names
+
 _Query the names of all the Japanese cities in the CITY table. The COUNTRYCODE for Japan is JPN._
 
 The CITY table is described as follows: 
