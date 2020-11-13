@@ -26,7 +26,7 @@ CITY table described as:_
 |COUNTRYCODE|VARCHAR2(3)	|
 |DISTRICT	|VARCHAR2(20)	|
 |POPULATION	|NUMBER			|
-```
+```mysql
 SELECT NAME FROM CITY 
 WHERE POPULATION > 120000 AND COUNTRYCODE="USA";
 ```
@@ -43,7 +43,7 @@ The CITY table is described as follows:
 |DISTRICT		|VARCHAR2(20)		|
 |POPULATION	|NUMBER			|
 
-```
+```mysql
 SELECT * FROM CITY;
 ```
 **Problem 4:** Select by ID
@@ -58,7 +58,7 @@ The CITY table is described as follows:
 |COUNTRYCODE	|VARCHAR2(3)		|
 |DISTRICT		|VARCHAR2(20)		|
 |POPULATION	|NUMBER			|
-```
+```mysql
 SELECT * FROM CITY 
 WHERE ID=1661;
 ```
@@ -75,7 +75,7 @@ The CITY table is described as follows:
 |DISTRICT		|VARCHAR2(20)		|
 |POPULATION	|NUMBER			|
 
-```
+```mysql
 SELECT * FROM CITY 
 WHERE COUNTRYCODE ="JPN";
 ```
@@ -91,7 +91,7 @@ The CITY table is described as follows:
 |COUNTRYCODE	|VARCHAR2(3)		|
 |DISTRICT		|VARCHAR2(20)		|
 |POPULATION	|NUMBER			|
-```
+```mysql
 SELECT NAME FROM CITY
 WHERE COUNTRYCODE="JPN";
 ```
@@ -107,7 +107,7 @@ The STATION table is described as follows:
 |LAT_N		|NUMBER			|
 |LONG_W		|NUMBER			|
 
-```
+```mysql
 SELECT DISTINCT CITY, STATE FROM STATION;
 ```
 **PROBLEM 8 :** WEATHER OBSERVATION STATION3
@@ -121,7 +121,7 @@ The STATION table is described as follows:
 |LAT_N		|NUMBER			|
 |LONG_W		|NUMBER			|
 
-```
+```mysql
 SELECT DISTINCT CITY FROM STATION
 WHERE ID%2=0;
 ```
@@ -137,7 +137,7 @@ The STATION table is described as follows:
 |LAT_N		|NUMBER			|
 |LONG_W		|NUMBER			|
 
-```
+```mysql
 SELECT COUNT(CITY)-COUNT(DISTINCT CITY) FROM STATION;
 ```
 **PROBLEM 10:** WEATHER OBSERVATION STATION 5
@@ -154,7 +154,7 @@ The STATION table is described as follows:
 |LONG_W		|NUMBER			|
 
 
-```
+```mysql
 SELECT CITY, MIN(LENGTH(CITY)) FROM STATION WHERE LENGTH(CITY)=MIN(LENGTH(CITY));
 SELECT CITY, MAX(LENGTH(CITY)) FROM STATION;
 ```

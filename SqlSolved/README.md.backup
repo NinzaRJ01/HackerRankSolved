@@ -26,7 +26,7 @@ CITY table described as:_
 |COUNTRYCODE|VARCHAR2(3)	|
 |DISTRICT	|VARCHAR2(20)	|
 |POPULATION	|NUMBER			|
-```
+```mysql
 SELECT NAME FROM CITY 
 WHERE POPULATION > 120000 AND COUNTRYCODE="USA";
 ```
@@ -43,7 +43,7 @@ The CITY table is described as follows:
 |DISTRICT		|VARCHAR2(20)		|
 |POPULATION	|NUMBER			|
 
-```
+```mysql
 SELECT * FROM CITY;
 ```
 **Problem 4:** Select by ID
