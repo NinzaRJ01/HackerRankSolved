@@ -4,9 +4,9 @@
         <img height=85 src="https://d3keuzeb2crhkn.cloudfront.net/hackerrank/assets/styleguide/logo_wordmark-f5c5eb61ab0a154c3ed9eda24d0b9e31.svg">
     </a>
 </p>
-**Currently 32 Problem Solved (Dated 12 Nov,20)**
+<h3 align="center">Currently 32 Problem Solved (Dated 12 Nov,20) </h3>
 
-## <ins>Badges</ins> : ##
+## <ins>Badges</ins> :
 
 - Problem Solving  **1 Star**
 - CPP **2 Star**
