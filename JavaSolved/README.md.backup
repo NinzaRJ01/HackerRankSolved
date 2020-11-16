@@ -31,6 +31,7 @@
 	'      baeldung'
 
 If we need to left-justify our string, then we can use the ‘-‘ flag:
+
 ``` java
 	System.out.printf("'%-10s' %n", "baeldung");
 	
@@ -57,4 +58,47 @@ If we need to left-justify our string, then we can use the ‘-‘ flag:
       System.out.format("%tl:%tM %tp%n", c, c, c);  // -->  "2:34 am"
 
       System.out.format("%tD%n", c);    // -->  "05/29/06"
+```
+
+## -> Remarks about Calendar Class ##
+- Calendar class is an abstract class in java. So you simply can't create **object** of it by invoking constructor. So, inorder to create an object which can be meaningful, we uses getInstance Method of Calendar Class.
+
+```java
+import java.util.Calendar;
+...
+Calendar mCalendar = Calendar.getInstance();
+```
+
+- nearly all fields of Calendar is static.
+- \<objectname>.set(int year,int month,int day) can be used to set datetime of Calender object manual, <ins>by default it is similar to current datetime.</ins>
+
+- get(int field) to get field value indentified by field id which is an stored as integer.
+Example:-
+
+	Calendarobj.get(Calendar.DAY\_OF_MONTH)
+
+### Important fields in calendar class
+
+|field 	  |Description
+|--------|--------|
+|DAY\_OF_WEEK| Field number for get and set indicating the day of the week.|
+|DAY\_OF\_WEEK\_IN_MONTH|Field number for get and set indicating the ordinal number of the day of the week within the current month.|
+|DAY\_OF_YEAR|Field number for get and set indicating the day number within the current year.|
+|WEEK\_OF_MONTH|Field number for get and set indicating the week number within the current month.|
+|YEAR| Field number for get and set indicating the year.|
+|DATE| Field number for get and set indicating the day of the month.|
+|MINUTE| Field number for get and set indicating the minute within the hour.|
+|SECOND | Field number for get and set indicating the second within the minute.|
+
+**Important Note**
+--
+```
+SUNDAY Field Value is 1
+
+Monday  "       "   " 2
+
+.....
+
+.....
+Saturday "     "   "  7
 ```
