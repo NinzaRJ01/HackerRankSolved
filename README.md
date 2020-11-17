@@ -9,7 +9,7 @@
 ## <ins>Badges</ins> :
 
 - Problem Solving  **1 Star**
-- CPP **2 Star**
+- CPP **3 Star**
 - Java **4 Star**
 - 30 Days of Code **1 Star**
 - 10 Days of Js **1 Star**
