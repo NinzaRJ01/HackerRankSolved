@@ -21,4 +21,9 @@
 		class <obj-name>[<n>];
 		<obj-name>[<i>] = new <obj>;
 		
-
+-> & or reference operator is used to pass the reference of to corresponding variable 
+	i.e 
+	int *pa = &a
+if & opeartor is used in left side of expression it is called to be deference operator.
+	
+-> 
