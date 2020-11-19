@@ -8,15 +8,20 @@
 
 ## <ins>Badges</ins> :
 
-- Problem Solving  **1 Star**
-- CPP **3 Star**
-- Java **4 Star**
-- 30 Days of Code **1 Star**
-- 10 Days of Js **1 Star**
-- Sql **1 Star**
+- Problem Solving  **1 Star**⭐
+- CPP **3 Star**⭐⭐⭐
+- Java **5 Star** 
+⭐
+⭐
+⭐
+⭐
+⭐
+- 30 Days of Code **1 Star**⭐
+- 10 Days of Js **1 Star**⭐
+- Sql **1 Star**⭐
 
 ## <ins> Verified Skills</ins>  :
-- _**Java(Basic)**_
+- _**Java(Basic)**_ 🟩
 
 
 <p align="right"> On HackerRank Only</p>
