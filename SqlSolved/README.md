@@ -160,6 +160,14 @@ The STATION table is described as follows:
 
 
 ```mysql
-SELECT CITY, MIN(LENGTH(CITY)) FROM STATION WHERE LENGTH(CITY)=MIN(LENGTH(CITY));
-SELECT CITY, MAX(LENGTH(CITY)) FROM STATION;
+SELECT CITY,LENGTH(CITY) FROM STATION
+ ORDER BY LENGTH(CITY),CITY
+LIMIT 1;
+SELECT CITY,LENGTH(CITY) FROM STATION
+ ORDER BY LENGTH(CITY) DESC,CITY 
+LIMIT 1;
 ```
+**Explaintion** -> order by length(city) gives a list ordered by increasing order of Length on which most top element is of smallest length and last element is of largest length.
+So, here we require a way to limit the no. of entries to take for which we use :	
+-----------	**Limit** keyword 
+ 
