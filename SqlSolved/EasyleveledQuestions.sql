@@ -132,6 +132,35 @@ The STATION table is described as follows:
 
 
 */
-SELECT CITY, MIN(LENGTH(CITY)) FROM STATION WHERE LENGTH(CITY)=MIN(LENGTH(CITY));
-SELECT CITY, MAX(LENGTH(CITY)) FROM STATION;
+SELECT CITY,LENGTH(CITY) FROM STATION
+ ORDER BY LENGTH(CITY),CITY
+LIMIT 1;
+SELECT CITY,LENGTH(CITY) FROM STATION
+ ORDER BY LENGTH(CITY) DESC,CITY 
+LIMIT 1;
+/*
+PROBLEM 11: WEATHER OBSERVATION STATION 6
+Query the list of CITY names starting with vowels (i.e., a, e, i, o, or u) from STATION. Your result cannot contain duplicates.
+The STATION table is described as follows:
+|ID		|NUMBER			|
+|CITY		|VARCHAR2(21)		|
+|STATE		|VARCHAR2(2)		|
+|LAT_N		|NUMBER			|
+|LONG_W		|NUMBER			|
+*/
+SELECT DISTINCT CITY FROM STATION 
+WHERE CITY REGEXP '^[aeiou].*';
+/*
+PROBLEM 12 : WEATHER OBSERVATION STATION 7
+Query the list of CITY names ending with vowels (a, e, i, o, u) from STATION. Your result cannot contain duplicates.
+The STATION table is described as follows:
+|ID		|NUMBER			|
+|CITY		|VARCHAR2(21)		|
+|STATE		|VARCHAR2(2)		|
+|LAT_N		|NUMBER			|
+|LONG_W		|NUMBER			|
+
+*/
+SELECT DISTINCT CITY FROM STATION 
+WHERE CITY REGEXP ".*[aeiou]$";
 
