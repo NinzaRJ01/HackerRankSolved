@@ -167,6 +167,24 @@ SELECT CITY,LENGTH(CITY) FROM STATION
  ORDER BY LENGTH(CITY) DESC,CITY 
 LIMIT 1;
 ```
+**Oracle Impementaion**
+```oracle 
+select * from (
+select city, length(city)  from station
+where --rownum = 1 and This will give wrong result b.s. it will exceute before order statement
+length(city) = (select min(length(city))
+                             from station )
+order by city )
+where rownum=1;
+select * from (
+select city, length(city)  from station
+where --rownum = 1 and 
+length(city) = (select max(length(city))
+                             from station )
+order by city desc)
+where rownum=1;
+```
+
 **Explaintion** -> order by length(city) gives a list ordered by increasing order of Length on which most top element is of smallest length and last element is of largest length.
 So, here we require a way to limit the no. of entries to take for which we use :	
 -----------	**Limit** keyword 
@@ -255,6 +273,7 @@ WHERE CITY REGEXP '^[^aeiou].*';
 WHERE CITY REGEXP '.*[^aeiou]$';
  ```
 **PROBLEM 16** : WEATHER OBSERVATION STATION 11
+
 Query the list of CITY names from STATION that either do not start with vowels or do not end with vowels. Your result cannot contain duplicates.
 The STATION table is described as follows:
 
@@ -267,5 +286,23 @@ The STATION table is described as follows:
  
  ```sql
  SELECT DISTINCT CITY FROM STATION
+WHERE CITY REGEXP '(^[^aeiou].*)|(.*[^aeiou]$)';
+```
+**PROBLEM 17** : WEATHER OBSERVATION STATION 11
+
+Query the list of CITY names from STATION that do not start with vowels and do not end with vowels. Your result cannot contain duplicates.
+
+The STATION table is described as follows:
+
+
+|ID		|NUMBER			|
+|-------|--------------|
+|CITY		|VARCHAR2(21)		|
+|STATE		|VARCHAR2(2)		|
+|LAT_N		|NUMBER			|
+|LONG_W		|NUMBER			|
+
+```sql
+SELECT DISTINCT CITY FROM STATION
 WHERE CITY REGEXP '^[^aeiou].*[^aeiou]$';
 ```
