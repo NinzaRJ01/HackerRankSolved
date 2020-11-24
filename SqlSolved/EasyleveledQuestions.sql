@@ -138,6 +138,22 @@ LIMIT 1;
 SELECT CITY,LENGTH(CITY) FROM STATION
  ORDER BY LENGTH(CITY) DESC,CITY 
 LIMIT 1;
+--Oracle Impelementation
+select * from (
+select city, length(city)  from station
+where --rownum = 1 and This will give wrong result b.s. it will exceute before order statement
+length(city) = (select min(length(city))
+                             from station )
+order by city )
+where rownum=1;
+select * from (
+select city, length(city)  from station
+where --rownum = 1 and 
+length(city) = (select max(length(city))
+                             from station )
+order by city desc)
+where rownum=1;
+
 /*
 PROBLEM 11: WEATHER OBSERVATION STATION 6
 Query the list of CITY names starting with vowels (i.e., a, e, i, o, or u) from STATION. Your result cannot contain duplicates.
