@@ -168,7 +168,7 @@ SELECT CITY,LENGTH(CITY) FROM STATION
 LIMIT 1;
 ```
 **Oracle Impementaion**
-```oracle 
+```sql 
 select * from (
 select city, length(city)  from station
 where --rownum = 1 and This will give wrong result b.s. it will exceute before order statement
