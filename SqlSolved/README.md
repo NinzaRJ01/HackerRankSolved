@@ -206,6 +206,13 @@ The STATION table is described as follows:
 SELECT DISTINCT CITY FROM STATION 
 WHERE CITY REGEXP '^[aeiou].*';
 ```
+
+**Oracle Implemenation**
+```sql
+SELECT City
+FROM Station
+WHERE City LIKE 'A%' or City LIKE 'E%' or City LIKE 'I%' or City LIKE 'O%' or City LIKE 'U%';
+```
 **PROBLEM 12** : WEATHER OBSERVATION STATION 7 
 
 Query the list of CITY names ending with vowels (a, e, i, o, u) from STATION. Your result cannot contain duplicates.
