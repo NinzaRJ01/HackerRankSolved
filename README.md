@@ -13,7 +13,7 @@
 - Java **5 Star** ⭐⭐⭐⭐⭐
 - 30 Days of Code **1 Star**⭐
 - 10 Days of Js **1 Star**⭐
-- Sql **2 Star**⭐⭐
+- Sql **4 Star**⭐⭐⭐⭐
 
 ## <ins> Verified Skills</ins>  :
 - _**Java(Basic)**_ 🟩

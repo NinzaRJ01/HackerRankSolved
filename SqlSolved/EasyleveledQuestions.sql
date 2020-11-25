@@ -241,4 +241,12 @@ Query the list of CITY names from STATION that do not start with vowels and do n
 SELECT DISTINCT CITY FROM STATION
 WHERE CITY REGEXP '^[^aeiou].*[^aeiou]$';
  
+/*PROBLEM : Type of Triangle*/
+SELECT CASE
+    WHEN A+B <= C OR A+C <= B OR C+B <= A THEN "Not A Triangle"
+    WHEN A = B AND B = C THEN 'Equilateral'
+    WHEN A = B OR B = C OR A = C THEN 'Isosceles'
+    ELSE 'Scalene'
+END
+FROM TRIANGLES;
 
