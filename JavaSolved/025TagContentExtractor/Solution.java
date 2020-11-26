@@ -12,8 +12,10 @@ public class Solution{
 		while(testCases>0){
 			String line = in.nextLine();
 			
-          	//Write your code
-            Pattern p = Pattern.compile("<(.+)>([^<]+)</\\1>");//Concept Used grouping in regex
+          	//(.+) except \\w because in given exmaple <SA premium> space is allowed
+          	//\\1 reference to previous group one
+          	//[^<] any thing else but <>$
+            Pattern p = Pattern.compile("<(.+)>([^<$]+)</\\1>");//Concept Used grouping in regex
             Matcher m = p.matcher(line);
             if(!m.find())System.out.println("None");
             else{
