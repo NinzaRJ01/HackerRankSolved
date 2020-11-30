@@ -16,7 +16,7 @@
 - Sql **4 Star**⭐⭐⭐⭐
 
 ## <ins> Verified Skills</ins>  :
-- _**Java(Basic)**_ 🟩
-
+- _**[Java(Basic)](https://www.hackerrank.com/certificates/a1249f3b5428)**_ 🟩
+- _**[JavaScript(Basic)](https://www.hackerrank.com/certificates/7bc06058eeb7)**_ 🟩
 
 <p align="right"> On HackerRank Only</p>
