@@ -313,3 +313,113 @@ The STATION table is described as follows:
 SELECT DISTINCT CITY FROM STATION
 WHERE CITY REGEXP '^[^aeiou].*[^aeiou]$';
 ```
+**PROBLEM 18:** Higher than 75 marks
+
+Query the Name of any student in STUDENTS who scored higher than Marks. Order your output by the last three characters of each name. If two or more students both have names ending in the same last three characters (i.e.: Bobby, Robby, etc.), secondary sort them by ascending ID.
+
+|Column |Type 	|
+|-------|------|
+|ID		|Integer|
+|Name	|String	|
+|Marks	|Integer|
+
+```sql
+SELECT  NAME FROM STUDENTS
+WHERE MARKS > 75
+ORDER BY RIGHT(NAME,3),ID;
+```
+
+**PROBLEM 19:** EMPLOYEE NAME 
+
+Write a query that prints a list of employee names (i.e.: the name attribute) from the Employee table in alphabetical order.
+
+|Column		|Type	|
+|----------|-------|
+|employee_id|Integer|
+|name		|String|
+|months		|Integer|
+|salary		|Integer|
+
+```sql
+SELECT NAME FROM EMPLOYEE
+ORDER BY NAME;
+```
+
+**PROBLEM 20:** EMPLOYEE SALARIES 
+
+Write a query that prints a list of employee names (i.e.: the name attribute) for employees in Employee having a salary greater than 2000 per month who have been employees for less than 10 months. Sort your result by ascending employee_id.
+
+|Column		|Type	|
+|----------|-------|
+|employee_id|Integer|
+|name		|String|
+|months		|Integer|
+|salary		|Integer|
+
+```sql
+SELECT NAME FROM EMPLOYEE
+WHERE SALARY > 2000 AND MONTHS <10
+ORDER BY EMPLOYEE_ID ASC;
+```
+
+**PROBLEM 21:** TYPE OF TRIANGLE
+
+Write a query identifying the type of each record in the TRIANGLES table using its three side lengths. Output one of the following statements for each record in the table:
+
+_Equilateral:_ It's a triangle with 3 sides of equal length.
+
+_Isosceles:_ It's a triangle with 2 sides of equal length.
+
+_Scalene:_ It's a triangle with 3 sides of differing lengths.
+
+_Not A Triangle:_ The given values of A, B, and C don't form a triangle.
+
+The TRIANGLES table is described as follows:
+
+|Column 	|Type		|
+|-----------|----------|
+|A			|Integer	|
+|B			|Integer	|
+|C			|Integer	|  
+
+```sql
+SELECT CASE
+    WHEN A+B <= C OR A+C <= B OR C+B <= A THEN "Not A Triangle"
+    WHEN A = B AND B = C THEN 'Equilateral'
+    WHEN A = B OR B = C OR A = C THEN 'Isosceles'
+    ELSE 'Scalene'
+END
+FROM TRIANGLES;
+```
+
+**PROBLEM 22:** Revising Aggregations - The Count Function
+
+Query a count of the number of cities in CITY having a Population larger than 100,000.
+
+Field		|Type			|
+| -------- | ------------|
+|ID		|NUMBER			|
+|NAME		|VARCHAR2(17)		|
+|COUNTRYCODE	|VARCHAR2(3)		|
+|DISTRICT		|VARCHAR2(20)		|
+|POPULATION	|NUMBER			|
+
+```sql
+select count(name) from  city 
+where population>100000;
+```
+**PROBLEM 23:** Revising Aggregations - Averages
+Query the average population of all cities in CITY where District is California. 
+
+Field		|Type			|
+| -------- | ------------|
+|ID		|NUMBER			|
+|NAME		|VARCHAR2(17)		|
+|COUNTRYCODE	|VARCHAR2(3)		|
+|DISTRICT		|VARCHAR2(20)		|
+|POPULATION	|NUMBER			|
+
+```sql
+select avg(population) from city
+where district="California";
+```
