@@ -12,7 +12,7 @@
 - CPP **3 Star**⭐⭐⭐
 - Java **5 Star** ⭐⭐⭐⭐⭐
 - 30 Days of Code **1 Star**⭐
-- 10 Days of Js **3 Star**⭐⭐⭐
+- 10 Days of Js **4 Star**⭐⭐⭐⭐
 - Sql **4 Star**⭐⭐⭐⭐
 
 ## <ins> Verified Skills</ins>  :
