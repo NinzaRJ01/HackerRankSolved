@@ -13,7 +13,7 @@
 - Java **5 Star** ⭐⭐⭐⭐⭐
 - 30 Days of Code **1 Star**⭐
 - 10 Days of Js **4 Star**⭐⭐⭐⭐
-- Sql **4 Star**⭐⭐⭐⭐
+- Sql **5 Star**⭐⭐⭐⭐⭐
 
 ## <ins> Verified Skills</ins>  :
 - _**[Java(Basic)](https://www.hackerrank.com/certificates/a1249f3b5428)**_ 🟩
