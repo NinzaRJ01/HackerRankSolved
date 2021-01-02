@@ -289,8 +289,7 @@ PROBLEM 23: Revising Aggregations - Averages
 Query the average population of all cities in CITY where District is California. 
 */
 select avg(population) from city
-where district="California";
-/*
+where district="California";/*
 PROBLEM 24: Revising Aggregations - The Sum Function
 Query the total population of all cities in CITY where District is California. 
 */
@@ -341,3 +340,25 @@ Query the sum of Northern Latitudes (LAT_N) from STATION having values greater t
 SELECT ROUND(SUM(LAT_N),4) FROM STATION
 WHERE LAT_N BETWEEN 38.7880 AND 137.2345;
 
+/*
+PROBLEM 32 :Weather Observation Station 14
+Query the greatest value of the Northern Latitudes (LAT_N) from STATION that is less than 137.2345.
+ Truncate your answer to 4 decimal places.
+ 
+*/
+SELECT ROUND(MAX(LAT_N),4) FROM STATION 
+WHERE LAT_N < 137.2345;
+/*
+PROBLEM 33 :Weather Observation Station 15
+Query the Western Longitude (LONG_W) for the largest Northern Latitude (LAT_N) in STATION that is less than 137.2345. Round your answer to 4 decimal places.
+*/
+SELECT ROUND(LONG_W,4) FROM STATION
+WHERE LAT_N <137.2345
+ORDER BY LAT_N DESC
+LIMIT 1;
+/*
+PROBLEM 34 :Weather Observation Station 16
+Query the smallest Northern Latitude (LAT_N) from STATION that is greater than 137.2345. Round your answer to 4 decimal places.
+*/
+select round(min(lat_n),4) from 
+station where lat_n >38.7780;
