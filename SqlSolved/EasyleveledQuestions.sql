@@ -361,4 +361,41 @@ PROBLEM 34 :Weather Observation Station 16
 Query the smallest Northern Latitude (LAT_N) from STATION that is greater than 137.2345. Round your answer to 4 decimal places.
 */
 select round(min(lat_n),4) from 
-station where lat_n >38.7780;
+station where lat_n >38.7780
+/*
+PROBLEM 35 :Weather Observation Station 17
+Query the Western Longitude (LONG_W)where the smallest Northern Latitude (LAT_N) in STATION is greater than 38.7780 . Round your answer to 4 decimal places.
+*/
+select * from(
+    select round((long_w),4) from station
+    where lat_n = (select min(lat_n) from station where lat_n>38.7780)
+    )
+    where rownum = 1;
+/*
+PROBLEM 36 : Asian Cities
+Given the CITY and COUNTRY tables, query the sum of the populations of all cities where the CONTINENT is 'Asia'.
+
+Note: CITY.CountryCode and COUNTRY.Code are matching key columns.
+
+*/
+select sum(City.population) from country,city 
+where continent = "Asia" and country.code = city.countrycode;
+/*
+PROBLEM 37 : African Cities
+Given the CITY and COUNTRY tables, query the sum of the populations of all cities where the CONTINENT is 'Africa'.
+
+Note: CITY.CountryCode and COUNTRY.Code are matching key columns.
+*/
+select city.name from country,city 
+where continent = "Africa" and country.code = city.countrycode;
+/*
+PROBLEM 38 : Average Population of Each Continent
+Given the CITY and COUNTRY tables,  query the names of all the 
+continents (COUNTRY.Continent) and their respective average city 
+populations (CITY.Population) rounded down to the nearest 
+integer.
+*/
+select Country.Continent ,floor(avg(City.population)) from Country,City 
+where Country.code = City.countrycode 
+group by Country.Continent
+order by Country.Continent;
