@@ -584,3 +584,188 @@ SELECT ROUND(MAX(LAT_N),4) FROM STATION
 WHERE LAT_N < 137.2345;
 ```
 
+**PROBLEM 33 :** Weather Observation Station 14
+
+Query the Western Longitude (LONG_W) for the largest Northern Latitude (LAT_N) in STATION that is less than 137.2345. Round your answer to 4 decimal places.
+
+
+|ID		|NUMBER			|
+|-------|--------------|
+|CITY		|VARCHAR2(21)		|
+|STATE		|VARCHAR2(2)		|
+|LAT_N		|NUMBER			|
+|LONG_W		|NUMBER			|
+
+```sql
+SELECT ROUND(LONG_W,4) FROM STATION
+WHERE LAT_N <137.2345
+ORDER BY LAT_N DESC
+LIMIT 1;
+```
+
+**PROBLEM 34 :**Weather Observation Station 16
+
+Query the smallest Northern Latitude (LAT_N) from STATION that is greater than 137.2345. Round your answer to 4 decimal places.
+
+
+|ID		|NUMBER			|
+|-------|--------------|
+|CITY		|VARCHAR2(21)		|
+|STATE		|VARCHAR2(2)		|
+|LAT_N		|NUMBER			|
+|LONG_W		|NUMBER			|
+
+```sql
+select round(min(lat_n),4) from 
+station where lat_n >38.7780
+```
+
+**PROBLEM 35 :** Weather Observation Station 17
+
+Query the Western Longitude (LONG_W)where the smallest Northern Latitude (LAT_N) in STATION is greater than 38.7780 . Round your answer to 4 decimal places.
+
+|ID		|NUMBER			|
+|-------|--------------|
+|CITY		|VARCHAR2(21)		|
+|STATE		|VARCHAR2(2)		|
+|LAT_N		|NUMBER			|
+|LONG_W		|NUMBER			|
+
+```oracle sql
+select * from(
+    select round((long_w),4) from station
+    where lat_n = (select min(lat_n) from station where lat_n>38.7780)
+    )
+    where rownum = 1;
+```
+
+**PROBLEM 36 :** Asian Population
+
+Given the CITY and COUNTRY tables, query the sum of the populations of all cities where the CONTINENT is 'Asia'.
+
+Note: CITY.CountryCode and COUNTRY.Code are matching key columns.
+
+The CITY and COUNTRY tables are described as follows:
+
+**City :**
+
+| Field  | Type |
+|--------|------|
+| ID | NUMBER|
+| NAME | VARCHAR |
+| COUNTRYCODE | VARCHAR |
+| DISTRICT | VARCHAR |
+| POPULATION | NUMBER |
+
+**Country :**
+
+| Field  | Type |
+|--------|------|
+| CODE | VARCHAR2(3)|
+| NAME | VARCHAR2 (44)|
+| CONTINENT | VARCHAR2 (13)|
+| REGION | VARCHAR2 (25)|
+| SURFACEAREA | NUMBER |
+| INDEPYEAR | VARCHAR2 (5)|
+| POPULATION | NUMBER |
+| LIFE EXPECTANCY | VARCHAR2(4)|
+|GNP | NUMBER|
+|GNPOLD | VARCHAR2(9) |
+|LOCALNAME | VARCHAR2(44)|
+|GOVERNMENTFORM | VARCHAR2 (44)|
+|HEADOFSTATE | VARCHAR2(32)|
+|CAPITAL | VARCHAR2(4)|
+| CODE2 | VARCHAR2(2)|
+
+```sql
+select sum(City.population) from country,city 
+where continent = "Asia" and country.code = city.countrycode;
+```
+
+**PROBLEM 37 :** African Cities
+
+Given the CITY and COUNTRY tables, query the sum of the populations of all cities where the CONTINENT is 'Africa'.
+
+Note: CITY.CountryCode and COUNTRY.Code are matching key columns.
+
+The CITY and COUNTRY tables are described as follows:
+
+**City :**
+
+| Field  | Type |
+|--------|------|
+| ID | NUMBER|
+| NAME | VARCHAR |
+| COUNTRYCODE | VARCHAR |
+| DISTRICT | VARCHAR |
+| POPULATION | NUMBER |
+
+**Country :**
+
+| Field  | Type |
+|--------|------|
+| CODE | VARCHAR2(3)|
+| NAME | VARCHAR2 (44)|
+| CONTINENT | VARCHAR2 (13)|
+| REGION | VARCHAR2 (25)|
+| SURFACEAREA | NUMBER |
+| INDEPYEAR | VARCHAR2 (5)|
+| POPULATION | NUMBER |
+| LIFE EXPECTANCY | VARCHAR2(4)|
+|GNP | NUMBER|
+|GNPOLD | VARCHAR2(9) |
+|LOCALNAME | VARCHAR2(44)|
+|GOVERNMENTFORM | VARCHAR2 (44)|
+|HEADOFSTATE | VARCHAR2(32)|
+|CAPITAL | VARCHAR2(4)|
+| CODE2 | VARCHAR2(2)|
+
+```sql
+select city.name from country,city 
+where continent = "Africa" and country.code = city.countrycode
+```
+**PROBLEM 38 :** Average Population of Each Continent
+
+Given the CITY and COUNTRY tables,  query the names of all the 
+continents (COUNTRY.Continent) and their respective average city 
+populations (CITY.Population) rounded down to the nearest 
+integer.
+
+The CITY and COUNTRY tables are described as follows:
+
+**City :**
+
+| Field  | Type |
+|--------|------|
+| ID | NUMBER|
+| NAME | VARCHAR |
+| COUNTRYCODE | VARCHAR |
+| DISTRICT | VARCHAR |
+| POPULATION | NUMBER |
+
+**Country :**
+
+| Field  | Type |
+|--------|------|
+| CODE | VARCHAR2(3)|
+| NAME | VARCHAR2 (44)|
+| CONTINENT | VARCHAR2 (13)|
+| REGION | VARCHAR2 (25)|
+| SURFACEAREA | NUMBER |
+| INDEPYEAR | VARCHAR2 (5)|
+| POPULATION | NUMBER |
+| LIFE EXPECTANCY | VARCHAR2(4)|
+|GNP | NUMBER|
+|GNPOLD | VARCHAR2(9) |
+|LOCALNAME | VARCHAR2(44)|
+|GOVERNMENTFORM | VARCHAR2 (44)|
+|HEADOFSTATE | VARCHAR2(32)|
+|CAPITAL | VARCHAR2(4)|
+| CODE2 | VARCHAR2(2)|
+
+```sql
+select Country.Continent ,floor(avg(City.population)) from Country,City 
+where Country.code = City.countrycode 
+group by Country.Continent
+order by Country.Continent;
+```
