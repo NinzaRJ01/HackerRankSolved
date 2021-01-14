@@ -4,14 +4,14 @@
         <img height=85 src="https://d3keuzeb2crhkn.cloudfront.net/hackerrank/assets/styleguide/logo_wordmark-f5c5eb61ab0a154c3ed9eda24d0b9e31.svg">
     </a>
 </p>
-<h3 align="center">Currently 81 Problem Solved (Dated 5 Jan,21) </h3>
+<h3 align="center">Currently 92 Problem Solved (Dated 14 Jan,21) </h3>
 
 ## <ins>Badges</ins> :
 
 - Problem Solving  **2 Star**⭐⭐
 - CPP **3 Star**⭐⭐⭐
 - Java **5 Star** ⭐⭐⭐⭐⭐
-- 30 Days of Code **1 Star**⭐
+- 30 Days of Code **3 Star**⭐⭐⭐
 - 10 Days of Js **4 Star**⭐⭐⭐⭐
 - Sql **5 Star**⭐⭐⭐⭐⭐
 
