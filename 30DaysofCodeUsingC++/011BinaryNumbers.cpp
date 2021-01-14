@@ -1,23 +1,15 @@
-import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
-import java.util.*;
-import java.util.concurrent.*;
-import java.util.regex.*;
+#include <bits/stdc++.h>
 
-public class Solution {
+using namespace std;
 
 
 
-    private static final Scanner scanner = new Scanner(System.in);
-
-    public static void main(String[] args) {
-        int n = scanner.nextInt();
-        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
-
-        scanner.close();
-        int maxConsX = 0;//maximum consecutive x's
+int main()
+{
+    int n;
+    cin >> n;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+     int maxConsX = 0;//maximum consecutive x's
         int consX =0;//count consecutive x's
         int pre;
         while(n>0){//Time Complexity O(no. of digit in binary value of(n))=>O(i)
@@ -34,7 +26,6 @@ public class Solution {
             }
             
         }
-        System.out.println(maxConsX);
-        
-    }
+        cout<<maxConsX<<endl;
+    return 0;
 }
