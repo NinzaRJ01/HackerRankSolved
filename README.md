@@ -8,7 +8,7 @@
 
 ## <ins>Badges</ins> :
 
-- Problem Solving  **2 Star**⭐⭐
+- Problem Solving  **3 Star**⭐⭐⭐
 - CPP **3 Star**⭐⭐⭐
 - Java **5 Star** ⭐⭐⭐⭐⭐
 - 30 Days of Code **3 Star**⭐⭐⭐
