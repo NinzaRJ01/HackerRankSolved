@@ -17,6 +17,8 @@
 
 ## <ins> Verified Skills</ins>  :
 - _**[Java(Basic)](https://www.hackerrank.com/certificates/a1249f3b5428)**_ 🟩
-- _**[JavaScript(Basic)](https://www.hackerrank.com/certificates/7bc06058eeb7)**_ 🟩
 
+- _**[JavaScript(Basic)](https://www.hackerrank.com/certificates/7bc06058eeb7)**_ 🟩
+- **[SQL(Basic)](https://www.hackerrank.com/certificates/0352a3e90290)**
+- 
 <p align="right"> On HackerRank Only</p>
