@@ -20,5 +20,5 @@
 
 - _**[JavaScript(Basic)](https://www.hackerrank.com/certificates/7bc06058eeb7)**_ 🟩
 - **[SQL(Basic)](https://www.hackerrank.com/certificates/0352a3e90290)**
-- 
+
 <p align="right"> On HackerRank Only</p>
