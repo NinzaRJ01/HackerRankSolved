@@ -22,6 +22,8 @@
 
 - _**[SQL(Basic)](https://www.hackerrank.com/certificates/0352a3e90290)**_ 🟩
 
+- _**[Problem Solving(Basic)](https://www.hackerrank.com/certificates/88ac7d6d0cde)**_ 🟩
+
 - _**[SQL(Intermediate)](https://www.hackerrank.com/certificates/6a3d397a0311)**_ 🟩
 
 <p align="right"> On HackerRank Only</p>
