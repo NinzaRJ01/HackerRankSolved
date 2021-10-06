@@ -4,7 +4,7 @@
         <img height=85 src="./HackerRankIcon/HackerRankFullLogo.png">
     </a>
 </p>
-<h3 align="center">Currently 92 Problem Solved (Dated 14 Jan,21) </h3>
+<h3 align="center">Currently 116 Problem Solved (Dated 06 Oct,21) </h3>
 
 ## <ins>Badges</ins> :
 
