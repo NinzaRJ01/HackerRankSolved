@@ -26,4 +26,6 @@
 
 - _**[SQL(Intermediate)](https://www.hackerrank.com/certificates/6a3d397a0311)**_ 🟩
 
+- _**[Python(Basic)](https://www.hackerrank.com/certificates/5938010b9fec)**_ 🟩
+
 <p align="right"> On HackerRank Only</p>
